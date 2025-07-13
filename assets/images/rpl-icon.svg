@@ -1,0 +1,126 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="rplGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rplGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:1" />
+    </linearGradient>
+    <filter id="rplShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(26, 26, 46, 0.3)"/>
+    </filter>
+    <filter id="rplGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#rplGradient1)" filter="url(#rplShadow)"/>
+  
+  <!-- Monitor/Screen -->
+  <g transform="translate(50, 50)">
+    <!-- Monitor Base -->
+    <rect x="-25" y="-20" width="50" height="35" rx="3" fill="#1a1a2e" filter="url(#rplShadow)"/>
+    
+    <!-- Screen -->
+    <rect x="-22" y="-17" width="44" height="29" rx="2" fill="#000000"/>
+    
+    <!-- Code Lines -->
+    <g stroke="url(#rplGradient2)" stroke-width="1.5" opacity="0.9">
+      <line x1="-18" y1="-12" x2="-5" y2="-12"/>
+      <line x1="-15" y1="-8" x2="10" y2="-8"/>
+      <line x1="-18" y1="-4" x2="5" y2="-4"/>
+      <line x1="-10" y1="0" x2="15" y2="0"/>
+      <line x1="-18" y1="4" x2="8" y2="4"/>
+      <line x1="-12" y1="8" x2="18" y2="8"/>
+    </g>
+    
+    <!-- Cursor -->
+    <rect x="10" y="-1" width="1" height="3" fill="#00d4aa">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Monitor Stand -->
+    <rect x="-3" y="15" width="6" height="8" fill="#1a1a2e"/>
+    <rect x="-8" y="23" width="16" height="3" rx="1" fill="#1a1a2e"/>
+  </g>
+  
+  <!-- Code Brackets -->
+  <g transform="translate(20, 30)" opacity="0.7">
+    <path d="M0 0 L-5 5 L0 10" stroke="url(#rplGradient2)" stroke-width="2" fill="none" filter="url(#rplGlow)"/>
+    <path d="M10 0 L15 5 L10 10" stroke="url(#rplGradient2)" stroke-width="2" fill="none" filter="url(#rplGlow)"/>
+  </g>
+  
+  <g transform="translate(70, 60)" opacity="0.7">
+    <path d="M0 0 L-5 5 L0 10" stroke="url(#rplGradient2)" stroke-width="2" fill="none" filter="url(#rplGlow)"/>
+    <path d="M10 0 L15 5 L10 10" stroke="url(#rplGradient2)" stroke-width="2" fill="none" filter="url(#rplGlow)"/>
+  </g>
+  
+  <!-- Binary Numbers -->
+  <g fill="#ffffff" opacity="0.3" font-family="monospace" font-size="8">
+    <text x="15" y="20">101</text>
+    <text x="75" y="25">010</text>
+    <text x="20" y="85">110</text>
+    <text x="70" y="80">001</text>
+  </g>
+  
+  <!-- Floating Elements -->
+  <g opacity="0.6">
+    <!-- Bug Icon -->
+    <g transform="translate(25, 75)">
+      <ellipse cx="0" cy="0" rx="4" ry="2" fill="#ff6b35"/>
+      <circle cx="-2" cy="-1" r="0.5" fill="#ffffff"/>
+      <circle cx="2" cy="-1" r="0.5" fill="#ffffff"/>
+      <line x1="-3" y1="0" x2="-6" y2="-2" stroke="#ff6b35" stroke-width="1"/>
+      <line x1="3" y1="0" x2="6" y2="-2" stroke="#ff6b35" stroke-width="1"/>
+      <line x1="-3" y1="1" x2="-6" y2="3" stroke="#ff6b35" stroke-width="1"/>
+      <line x1="3" y1="1" x2="6" y2="3" stroke="#ff6b35" stroke-width="1"/>
+    </g>
+    
+    <!-- Database Icon -->
+    <g transform="translate(75, 35)">
+      <ellipse cx="0" cy="-2" rx="5" ry="2" fill="url(#rplGradient2)"/>
+      <rect x="-5" y="-2" width="10" height="4" fill="url(#rplGradient2)"/>
+      <ellipse cx="0" cy="2" rx="5" ry="2" fill="url(#rplGradient2)"/>
+    </g>
+    
+    <!-- API Icon -->
+    <g transform="translate(25, 25)">
+      <circle cx="0" cy="0" r="3" fill="none" stroke="url(#rplGradient2)" stroke-width="1.5"/>
+      <circle cx="-8" cy="0" r="2" fill="url(#rplGradient2)"/>
+      <circle cx="8" cy="0" r="2" fill="url(#rplGradient2)"/>
+      <line x1="-6" y1="0" x2="-3" y2="0" stroke="url(#rplGradient2)" stroke-width="1.5"/>
+      <line x1="3" y1="0" x2="6" y2="0" stroke="url(#rplGradient2)" stroke-width="1.5"/>
+    </g>
+  </g>
+  
+  <!-- Animated Data Flow -->
+  <g opacity="0.4">
+    <circle cx="30" cy="50" r="1" fill="#00d4aa">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <path d="M0 0 Q20 -10 40 0"/>
+      </animateMotion>
+    </circle>
+    <circle cx="70" cy="50" r="1" fill="#ff6b35">
+      <animateMotion dur="2.5s" repeatCount="indefinite">
+        <path d="M0 0 Q-20 10 -40 0"/>
+      </animateMotion>
+    </circle>
+  </g>
+  
+  <!-- Main Animation -->
+  <animateTransform
+    attributeName="transform"
+    attributeType="XML"
+    type="scale"
+    values="1;1.05;1"
+    dur="4s"
+    repeatCount="indefinite"/>
+</svg>

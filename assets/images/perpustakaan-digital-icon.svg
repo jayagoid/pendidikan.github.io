@@ -1,0 +1,306 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="libraryGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="libraryGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4aa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="libraryGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f7931e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0066ff;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="libraryShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(26, 26, 46, 0.3)"/>
+    </filter>
+    <filter id="libraryGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#libraryGradient1)" filter="url(#libraryShadow)"/>
+  
+  <!-- Digital Library Computer Setup -->
+  
+  <!-- Monitor/Screen -->
+  <g transform="translate(50, 40)">
+    <!-- Monitor Base -->
+    <rect x="-2" y="15" width="4" height="3" rx="1" fill="#333333" filter="url(#libraryShadow)"/>
+    <ellipse cx="0" cy="18" rx="6" ry="1" fill="#1a1a2e"/>
+    
+    <!-- Monitor Stand -->
+    <rect x="-1" y="12" width="2" height="6" fill="#666666"/>
+    
+    <!-- Monitor Frame -->
+    <rect x="-18" y="-15" width="36" height="27" rx="2" fill="#1a1a2e" filter="url(#libraryShadow)"/>
+    <rect x="-16" y="-13" width="32" height="23" rx="1" fill="#000000"/>
+    
+    <!-- Screen Content -->
+    <rect x="-15" y="-12" width="30" height="21" rx="0.5" fill="url(#screenGlow)" opacity="0.9"/>
+    
+    <!-- Digital Library Interface -->
+    <g fill="#ffffff" font-size="2" font-family="monospace">
+      <!-- Header -->
+      <rect x="-14" y="-11" width="28" height="2" fill="#2196f3" opacity="0.8"/>
+      <text x="0" y="-9.5" text-anchor="middle" font-size="1.5">DIGITAL LIBRARY</text>
+      
+      <!-- Search Bar -->
+      <rect x="-12" y="-7" width="20" height="2" rx="1" fill="#ffffff" opacity="0.9"/>
+      <rect x="-11" y="-6.5" width="18" height="1" fill="#f0f0f0"/>
+      <text x="-10" y="-6" font-size="1.2" fill="#666666">Search books...</text>
+      
+      <!-- Search Icon -->
+      <circle cx="7" cy="-6" r="0.8" fill="none" stroke="#2196f3" stroke-width="0.3"/>
+      <line x1="7.6" y1="-5.4" x2="8.5" y2="-4.5" stroke="#2196f3" stroke-width="0.3"/>
+      
+      <!-- Book Grid -->
+      <g opacity="0.8">
+        <!-- Row 1 -->
+        <rect x="-12" y="-3" width="3" height="4" rx="0.2" fill="#ff6b35"/>
+        <rect x="-8" y="-3" width="3" height="4" rx="0.2" fill="#2196f3"/>
+        <rect x="-4" y="-3" width="3" height="4" rx="0.2" fill="#00d4aa"/>
+        <rect x="0" y="-3" width="3" height="4" rx="0.2" fill="#9c27b0"/>
+        <rect x="4" y="-3" width="3" height="4" rx="0.2" fill="#ff9800"/>
+        <rect x="8" y="-3" width="3" height="4" rx="0.2" fill="#e91e63"/>
+        
+        <!-- Row 2 -->
+        <rect x="-12" y="2" width="3" height="4" rx="0.2" fill="#4caf50"/>
+        <rect x="-8" y="2" width="3" height="4" rx="0.2" fill="#795548"/>
+        <rect x="-4" y="2" width="3" height="4" rx="0.2" fill="#607d8b"/>
+        <rect x="0" y="2" width="3" height="4" rx="0.2" fill="#ff5722"/>
+        <rect x="4" y="2" width="3" height="4" rx="0.2" fill="#3f51b5"/>
+        <rect x="8" y="2" width="3" height="4" rx="0.2" fill="#009688"/>
+      </g>
+      
+      <!-- Book Titles (simplified) -->
+      <g font-size="0.8" fill="#ffffff">
+        <text x="-10.5" y="0" text-anchor="middle">PROG</text>
+        <text x="-6.5" y="0" text-anchor="middle">NET</text>
+        <text x="-2.5" y="0" text-anchor="middle">WEB</text>
+        <text x="1.5" y="0" text-anchor="middle">DB</text>
+        <text x="5.5" y="0" text-anchor="middle">AI</text>
+        <text x="9.5" y="0" text-anchor="middle">IOT</text>
+      </g>
+      
+      <!-- Navigation Menu -->
+      <g font-size="1" fill="#ffffff" opacity="0.7">
+        <text x="-12" y="8" text-anchor="start">📚 Categories</text>
+        <text x="-2" y="8" text-anchor="start">🔍 Search</text>
+        <text x="8" y="8" text-anchor="start">👤 Profile</text>
+      </g>
+    </g>
+    
+    <!-- Screen Reflection -->
+    <rect x="-15" y="-12" width="30" height="10" rx="0.5" fill="url(#screenGlow)" opacity="0.1"/>
+    
+    <!-- Power LED -->
+    <circle cx="14" cy="8" r="0.5" fill="#00ff00">
+      <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Keyboard -->
+  <g transform="translate(50, 70)">
+    <rect x="-15" y="-2" width="30" height="6" rx="1" fill="#333333" filter="url(#libraryShadow)"/>
+    <rect x="-14" y="-1" width="28" height="4" rx="0.5" fill="#666666"/>
+    
+    <!-- Keys -->
+    <g fill="#1a1a2e">
+      <!-- Top row -->
+      <rect x="-12" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="-10" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="-8" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="-6" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="-4" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="-2" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="0" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="2" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="4" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="6" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="8" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      <rect x="10" y="-0.5" width="1.5" height="1" rx="0.1"/>
+      
+      <!-- Bottom row -->
+      <rect x="-12" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="-10" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="-8" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="-6" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="-4" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="-2" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="0" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="2" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="4" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="6" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="8" y="1" width="1.5" height="1" rx="0.1"/>
+      <rect x="10" y="1" width="1.5" height="1" rx="0.1"/>
+      
+      <!-- Spacebar -->
+      <rect x="-6" y="2.5" width="12" height="1" rx="0.1"/>
+    </g>
+  </g>
+  
+  <!-- Mouse -->
+  <g transform="translate(70, 72)">
+    <ellipse cx="0" cy="0" rx="2" ry="3" fill="#333333" filter="url(#libraryShadow)"/>
+    <ellipse cx="0" cy="0" rx="1.5" ry="2.5" fill="#666666"/>
+    
+    <!-- Mouse Buttons -->
+    <rect x="-1" y="-2" width="0.8" height="2" rx="0.4" fill="#1a1a2e"/>
+    <rect x="0.2" y="-2" width="0.8" height="2" rx="0.4" fill="#1a1a2e"/>
+    
+    <!-- Scroll Wheel -->
+    <rect x="-0.2" y="-1.5" width="0.4" height="1" rx="0.2" fill="#333333"/>
+    
+    <!-- Mouse LED -->
+    <circle cx="0" cy="2" r="0.3" fill="#ff0000" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Digital Books Floating Around -->
+  <g opacity="0.8">
+    <!-- Book 1 -->
+    <g transform="translate(20, 30)">
+      <rect x="0" y="0" width="3" height="4" rx="0.2" fill="url(#libraryGradient2)" filter="url(#libraryShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 1.5 2; 5 1.5 2; 0 1.5 2" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0.2" y="0.2" width="2.6" height="3.6" rx="0.1" fill="#ffffff" opacity="0.9"/>
+      <g fill="#333333" font-size="0.6">
+        <text x="1.5" y="1" text-anchor="middle">HTML</text>
+        <text x="1.5" y="1.8" text-anchor="middle">CSS</text>
+        <text x="1.5" y="2.6" text-anchor="middle">JS</text>
+      </g>
+    </g>
+    
+    <!-- Book 2 -->
+    <g transform="translate(75, 25)">
+      <rect x="0" y="0" width="3" height="4" rx="0.2" fill="url(#libraryGradient3)" filter="url(#libraryShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 1.5 2; -5 1.5 2; 0 1.5 2" dur="5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0.2" y="0.2" width="2.6" height="3.6" rx="0.1" fill="#ffffff" opacity="0.9"/>
+      <g fill="#333333" font-size="0.6">
+        <text x="1.5" y="1" text-anchor="middle">PHP</text>
+        <text x="1.5" y="1.8" text-anchor="middle">SQL</text>
+        <text x="1.5" y="2.6" text-anchor="middle">API</text>
+      </g>
+    </g>
+    
+    <!-- Book 3 -->
+    <g transform="translate(15, 65)">
+      <rect x="0" y="0" width="3" height="4" rx="0.2" fill="#9c27b0" filter="url(#libraryShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 1.5 2; 3 1.5 2; 0 1.5 2" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0.2" y="0.2" width="2.6" height="3.6" rx="0.1" fill="#ffffff" opacity="0.9"/>
+      <g fill="#333333" font-size="0.6">
+        <text x="1.5" y="1" text-anchor="middle">NET</text>
+        <text x="1.5" y="1.8" text-anchor="middle">SEC</text>
+        <text x="1.5" y="2.6" text-anchor="middle">SRV</text>
+      </g>
+    </g>
+    
+    <!-- Book 4 -->
+    <g transform="translate(80, 65)">
+      <rect x="0" y="0" width="3" height="4" rx="0.2" fill="#4caf50" filter="url(#libraryShadow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 1.5 2; -3 1.5 2; 0 1.5 2" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0.2" y="0.2" width="2.6" height="3.6" rx="0.1" fill="#ffffff" opacity="0.9"/>
+      <g fill="#333333" font-size="0.6">
+        <text x="1.5" y="1" text-anchor="middle">AI</text>
+        <text x="1.5" y="1.8" text-anchor="middle">ML</text>
+        <text x="1.5" y="2.6" text-anchor="middle">DL</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Digital Data Flow -->
+  <g opacity="0.6">
+    <!-- Data Particles -->
+    <circle cx="25" cy="45" r="0.5" fill="#00ff88">
+      <animate attributeName="cx" values="25;75;25" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="75" cy="55" r="0.5" fill="#0066ff">
+      <animate attributeName="cx" values="75;25;75" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="70" r="0.5" fill="#ff6b35">
+      <animate attributeName="cy" values="70;30;70" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="70" cy="30" r="0.5" fill="#9c27b0">
+      <animate attributeName="cy" values="30;70;30" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- WiFi Signal -->
+  <g transform="translate(85, 15)" opacity="0.7">
+    <path d="M0 8 Q-4 4 -8 8" stroke="#00ff88" stroke-width="0.8" fill="none">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0 8 Q-6 2 -12 8" stroke="#00ff88" stroke-width="0.8" fill="none">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0 8 Q-8 0 -16 8" stroke="#00ff88" stroke-width="0.8" fill="none">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="0" cy="8" r="0.8" fill="#00ff88"/>
+  </g>
+  
+  <!-- Cloud Storage Icon -->
+  <g transform="translate(15, 15)" opacity="0.7">
+    <ellipse cx="0" cy="2" rx="4" ry="2" fill="#2196f3"/>
+    <ellipse cx="0" cy="0" rx="6" ry="3" fill="#00d4aa"/>
+    <ellipse cx="3" cy="1" rx="3" ry="2" fill="#ffffff" opacity="0.8"/>
+    
+    <!-- Upload/Download Arrows -->
+    <g stroke="#ffffff" stroke-width="0.8" fill="none">
+      <path d="M-2 -1 L-2 3 M-3 2 L-2 3 L-1 2">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M2 3 L2 -1 M1 0 L2 -1 L3 0">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+  
+  <!-- Digital Library Labels -->
+  <g fill="#ffffff" font-size="3" font-family="monospace" opacity="0.6">
+    <text x="20" y="90" text-anchor="middle">DIGITAL</text>
+    <text x="80" y="90" text-anchor="middle">LIBRARY</text>
+  </g>
+  
+  <!-- Access Statistics -->
+  <g transform="translate(85, 45)" opacity="0.5">
+    <rect x="-3" y="-8" width="6" height="16" rx="1" fill="#1a1a2e"/>
+    <rect x="-2.5" y="-7.5" width="5" height="15" rx="0.5" fill="#333333"/>
+    
+    <!-- Stats Display -->
+    <g fill="#00ff88" font-size="1.2" font-family="monospace">
+      <text x="0" y="-5" text-anchor="middle">1,247</text>
+      <text x="0" y="-3" text-anchor="middle">BOOKS</text>
+      <text x="0" y="0" text-anchor="middle">89</text>
+      <text x="0" y="2" text-anchor="middle">USERS</text>
+      <text x="0" y="5" text-anchor="middle">24/7</text>
+    </g>
+  </g>
+  
+  <!-- Main Library Pulse -->
+  <circle cx="50" cy="50" r="35" fill="none" stroke="url(#libraryGradient2)" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="35;50;35" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

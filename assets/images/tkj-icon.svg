@@ -1,0 +1,171 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="tkjGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tkjGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196f3;stop-opacity:1" />
+    </linearGradient>
+    <filter id="tkjShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(26, 26, 46, 0.3)"/>
+    </filter>
+    <filter id="tkjGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#tkjGradient1)" filter="url(#tkjShadow)"/>
+  
+  <!-- Central Server/Router -->
+  <g transform="translate(50, 50)">
+    <!-- Main Server Body -->
+    <rect x="-12" y="-15" width="24" height="30" rx="2" fill="#1a1a2e" filter="url(#tkjShadow)"/>
+    
+    <!-- Server Panels -->
+    <rect x="-10" y="-12" width="20" height="6" rx="1" fill="url(#tkjGradient2)" opacity="0.8"/>
+    <rect x="-10" y="-4" width="20" height="6" rx="1" fill="url(#tkjGradient2)" opacity="0.6"/>
+    <rect x="-10" y="4" width="20" height="6" rx="1" fill="url(#tkjGradient2)" opacity="0.8"/>
+    
+    <!-- LED Indicators -->
+    <circle cx="8" cy="-9" r="1" fill="#00d4aa">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="-1" r="1" fill="#ff6b35">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="7" r="1" fill="#2196f3">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Ports -->
+    <g fill="#000000">
+      <rect x="-8" y="-10" width="3" height="1.5" rx="0.5"/>
+      <rect x="-4" y="-10" width="3" height="1.5" rx="0.5"/>
+      <rect x="0" y="-10" width="3" height="1.5" rx="0.5"/>
+      <rect x="4" y="-10" width="3" height="1.5" rx="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Network Nodes -->
+  
+  <!-- Node 1 (Top Left) -->
+  <g transform="translate(25, 25)">
+    <circle cx="0" cy="0" r="6" fill="url(#tkjGradient2)" filter="url(#tkjShadow)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="1" fill="#1a1a2e"/>
+  </g>
+  
+  <!-- Node 2 (Top Right) -->
+  <g transform="translate(75, 25)">
+    <circle cx="0" cy="0" r="6" fill="url(#tkjGradient2)" filter="url(#tkjShadow)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="1" fill="#1a1a2e"/>
+  </g>
+  
+  <!-- Node 3 (Bottom Left) -->
+  <g transform="translate(25, 75)">
+    <circle cx="0" cy="0" r="6" fill="url(#tkjGradient2)" filter="url(#tkjShadow)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="1" fill="#1a1a2e"/>
+  </g>
+  
+  <!-- Node 4 (Bottom Right) -->
+  <g transform="translate(75, 75)">
+    <circle cx="0" cy="0" r="6" fill="url(#tkjGradient2)" filter="url(#tkjShadow)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="1" fill="#1a1a2e"/>
+  </g>
+  
+  <!-- Network Connections -->
+  <g stroke="url(#tkjGradient2)" stroke-width="2" fill="none" opacity="0.7" filter="url(#tkjGlow)">
+    <!-- From center to nodes -->
+    <line x1="50" y1="50" x2="25" y2="25"/>
+    <line x1="50" y1="50" x2="75" y2="25"/>
+    <line x1="50" y1="50" x2="25" y2="75"/>
+    <line x1="50" y1="50" x2="75" y2="75"/>
+    
+    <!-- Between nodes -->
+    <line x1="25" y1="25" x2="75" y2="25"/>
+    <line x1="25" y1="75" x2="75" y2="75"/>
+    <line x1="25" y1="25" x2="25" y2="75"/>
+    <line x1="75" y1="25" x2="75" y2="75"/>
+  </g>
+  
+  <!-- Data Packets Animation -->
+  <g opacity="0.8">
+    <!-- Packet 1 -->
+    <circle cx="25" cy="25" r="1.5" fill="#00d4aa">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <path d="M0 0 L25 25 L25 0 L0 -25 Z"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Packet 2 -->
+    <circle cx="75" cy="25" r="1.5" fill="#ff6b35">
+      <animateMotion dur="2.5s" repeatCount="indefinite">
+        <path d="M0 0 L-25 25 L0 50 L25 25 Z"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Packet 3 -->
+    <circle cx="25" cy="75" r="1.5" fill="#2196f3">
+      <animateMotion dur="3.5s" repeatCount="indefinite">
+        <path d="M0 0 L25 -25 L50 0 L25 25 Z"/>
+      </animateMotion>
+    </circle>
+  </g>
+  
+  <!-- WiFi Signal -->
+  <g transform="translate(20, 20)" opacity="0.6">
+    <g stroke="#ffffff" stroke-width="1.5" fill="none">
+      <path d="M0 8 Q4 4 8 8"/>
+      <path d="M-2 10 Q4 2 10 10"/>
+      <path d="M-4 12 Q4 0 12 12"/>
+    </g>
+    <circle cx="4" cy="10" r="1" fill="#ffffff"/>
+  </g>
+  
+  <!-- Ethernet Cable -->
+  <g transform="translate(70, 70)" opacity="0.6">
+    <rect x="0" y="0" width="8" height="3" rx="1" fill="#ffffff"/>
+    <rect x="1" y="0.5" width="6" height="2" rx="0.5" fill="#1a1a2e"/>
+    <rect x="8" y="1" width="2" height="1" fill="#ffffff"/>
+  </g>
+  
+  <!-- Network Activity Indicators -->
+  <g opacity="0.5">
+    <rect x="15" y="45" width="2" height="4" fill="#00d4aa">
+      <animate attributeName="height" values="4;8;4" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="18" y="47" width="2" height="2" fill="#00d4aa">
+      <animate attributeName="height" values="2;6;2" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="21" y="46" width="2" height="3" fill="#00d4aa">
+      <animate attributeName="height" values="3;7;3" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="77" y="45" width="2" height="4" fill="#ff6b35">
+      <animate attributeName="height" values="4;8;4" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="47" width="2" height="2" fill="#ff6b35">
+      <animate attributeName="height" values="2;6;2" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="83" y="46" width="2" height="3" fill="#ff6b35">
+      <animate attributeName="height" values="3;7;3" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Main Pulse Animation -->
+  <circle cx="50" cy="50" r="20" fill="none" stroke="url(#tkjGradient2)" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="20;35;20" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

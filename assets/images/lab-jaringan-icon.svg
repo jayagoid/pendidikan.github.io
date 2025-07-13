@@ -1,0 +1,298 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="netGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="netGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4aa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="netGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f7931e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="netShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(26, 26, 46, 0.3)"/>
+    </filter>
+    <filter id="netGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#netGradient1)" filter="url(#netShadow)"/>
+  
+  <!-- Central Network Hub/Switch -->
+  <g transform="translate(50, 50)">
+    <!-- Main Switch Body -->
+    <rect x="-18" y="-6" width="36" height="12" rx="2" fill="#1a1a2e" filter="url(#netShadow)"/>
+    
+    <!-- Front Panel -->
+    <rect x="-16" y="-4" width="32" height="8" rx="1" fill="#333333"/>
+    
+    <!-- Ethernet Ports (24-port switch) -->
+    <g fill="#000000">
+      <!-- Top row -->
+      <rect x="-15" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="-12" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="-9" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="-6" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="-3" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="0" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="3" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="6" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="9" y="-3" width="2" height="1.5" rx="0.2"/>
+      <rect x="12" y="-3" width="2" height="1.5" rx="0.2"/>
+      
+      <!-- Bottom row -->
+      <rect x="-15" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="-12" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="-9" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="-6" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="-3" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="0" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="3" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="6" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="9" y="1.5" width="2" height="1.5" rx="0.2"/>
+      <rect x="12" y="1.5" width="2" height="1.5" rx="0.2"/>
+      
+      <!-- Uplink ports -->
+      <rect x="15" y="-1" width="1.5" height="2" rx="0.2" fill="url(#netGradient3)"/>
+    </g>
+    
+    <!-- Status LEDs -->
+    <g>
+      <!-- Port activity LEDs (top row) -->
+      <circle cx="-14" cy="-2" r="0.3" fill="#00ff00">
+        <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-11" cy="-2" r="0.3" fill="#ff6b35">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-8" cy="-2" r="0.3" fill="#2196f3">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-5" cy="-2" r="0.3" fill="#00d4aa">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-2" cy="-2" r="0.3" fill="#e91e63">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1" cy="-2" r="0.3" fill="#9c27b0">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="4" cy="-2" r="0.3" fill="#ff9800">
+        <animate attributeName="opacity" values="1;0.3;1" dur="0.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="7" cy="-2" r="0.3" fill="#4caf50">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Power LED -->
+      <circle cx="15" cy="3" r="0.5" fill="#00ff00">
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Brand Label -->
+    <rect x="-8" y="0" width="16" height="1" fill="#555555" opacity="0.7"/>
+    <text x="0" y="0.7" fill="#ffffff" font-size="3" text-anchor="middle" font-family="monospace">CISCO 2960</text>
+  </g>
+  
+  <!-- Network Devices -->
+  
+  <!-- Router (Top Left) -->
+  <g transform="translate(20, 20)">
+    <rect x="-6" y="-4" width="12" height="8" rx="1" fill="#1a1a2e" filter="url(#netShadow)"/>
+    <rect x="-5" y="-3" width="10" height="6" rx="0.5" fill="#333333"/>
+    
+    <!-- Router Ports -->
+    <g fill="#000000">
+      <rect x="-4" y="-2" width="1.5" height="1" rx="0.2"/>
+      <rect x="-2" y="-2" width="1.5" height="1" rx="0.2"/>
+      <rect x="0" y="-2" width="1.5" height="1" rx="0.2"/>
+      <rect x="2" y="-2" width="1.5" height="1" rx="0.2"/>
+    </g>
+    
+    <!-- Router LEDs -->
+    <circle cx="-3" cy="1" r="0.4" fill="#00ff00">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="1" r="0.4" fill="#ff6b35">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="3" cy="1" r="0.4" fill="#2196f3">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Antennas -->
+    <rect x="-7" y="-6" width="0.5" height="4" fill="#666666"/>
+    <rect x="6.5" y="-6" width="0.5" height="4" fill="#666666"/>
+    <circle cx="-6.75" cy="-6" r="1" fill="none" stroke="#666666" stroke-width="0.3"/>
+    <circle cx="6.75" cy="-6" r="1" fill="none" stroke="#666666" stroke-width="0.3"/>
+  </g>
+  
+  <!-- Firewall (Top Right) -->
+  <g transform="translate(80, 20)">
+    <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#1a1a2e" filter="url(#netShadow)"/>
+    <rect x="-4" y="-2" width="8" height="4" rx="0.5" fill="#333333"/>
+    
+    <!-- Firewall Symbol -->
+    <g transform="translate(0, 0)" fill="url(#netGradient3)">
+      <path d="M-2 -1 L0 -2 L2 -1 L2 1 L0 2 L-2 1 Z"/>
+      <rect x="-0.5" y="-1" width="1" height="2" fill="#ffffff"/>
+    </g>
+    
+    <!-- Security LEDs -->
+    <circle cx="-2" cy="1.5" r="0.3" fill="#ff0000">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="2" cy="1.5" r="0.3" fill="#00ff00">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Server (Bottom Left) -->
+  <g transform="translate(20, 80)">
+    <rect x="-4" y="-8" width="8" height="16" rx="1" fill="#1a1a2e" filter="url(#netShadow)"/>
+    <rect x="-3" y="-7" width="6" height="14" rx="0.5" fill="#333333"/>
+    
+    <!-- Server Bays -->
+    <rect x="-2.5" y="-6" width="5" height="2" rx="0.2" fill="url(#netGradient2)" opacity="0.8"/>
+    <rect x="-2.5" y="-3" width="5" height="2" rx="0.2" fill="url(#netGradient2)" opacity="0.6"/>
+    <rect x="-2.5" y="0" width="5" height="2" rx="0.2" fill="url(#netGradient2)" opacity="0.8"/>
+    <rect x="-2.5" y="3" width="5" height="2" rx="0.2" fill="url(#netGradient2)" opacity="0.4"/>
+    
+    <!-- Server LEDs -->
+    <circle cx="2" cy="-5" r="0.3" fill="#00ff00">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="2" cy="-2" r="0.3" fill="#ff6b35">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="2" cy="1" r="0.3" fill="#2196f3">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Workstation (Bottom Right) -->
+  <g transform="translate(80, 80)">
+    <!-- Monitor -->
+    <rect x="-5" y="-6" width="10" height="8" rx="1" fill="#1a1a2e" filter="url(#netShadow)"/>
+    <rect x="-4" y="-5" width="8" height="6" rx="0.5" fill="#000000"/>
+    <rect x="-3.5" y="-4.5" width="7" height="5" rx="0.3" fill="url(#netGradient2)" opacity="0.7"/>
+    
+    <!-- Screen Content -->
+    <g fill="#ffffff" opacity="0.8">
+      <rect x="-3" y="-4" width="2" height="0.5"/>
+      <rect x="-3" y="-3" width="3" height="0.5"/>
+      <rect x="-3" y="-2" width="1.5" height="0.5"/>
+      <rect x="-3" y="-1" width="2.5" height="0.5"/>
+    </g>
+    
+    <!-- Stand -->
+    <rect x="-1" y="2" width="2" height="3" fill="#1a1a2e"/>
+    <rect x="-3" y="5" width="6" height="1" rx="0.5" fill="#1a1a2e"/>
+  </g>
+  
+  <!-- Network Connections -->
+  <g stroke="url(#netGradient2)" stroke-width="2" fill="none" opacity="0.7" filter="url(#netGlow)">
+    <!-- From central switch to devices -->
+    <path d="M32 50 Q25 35 20 20"/>
+    <path d="M68 50 Q75 35 80 20"/>
+    <path d="M32 50 Q25 65 20 80"/>
+    <path d="M68 50 Q75 65 80 80"/>
+    
+    <!-- Inter-device connections -->
+    <path d="M26 20 Q50 10 74 20"/>
+    <path d="M26 80 Q50 90 74 80"/>
+  </g>
+  
+  <!-- Data Packets Animation -->
+  <g opacity="0.8">
+    <!-- Packet 1: Router to Switch -->
+    <circle cx="20" cy="20" r="1" fill="#00d4aa">
+      <animateMotion dur="2s" repeatCount="indefinite">
+        <path d="M0 0 Q7 15 12 30"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Packet 2: Switch to Firewall -->
+    <circle cx="50" cy="50" r="1" fill="#ff6b35">
+      <animateMotion dur="1.5s" repeatCount="indefinite">
+        <path d="M0 0 Q15 -15 30 -30"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Packet 3: Server to Switch -->
+    <circle cx="20" cy="80" r="1" fill="#2196f3">
+      <animateMotion dur="2.5s" repeatCount="indefinite">
+        <path d="M0 0 Q15 -15 30 -30"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Packet 4: Switch to Workstation -->
+    <circle cx="50" cy="50" r="1" fill="#e91e63">
+      <animateMotion dur="1.8s" repeatCount="indefinite">
+        <path d="M0 0 Q15 15 30 30"/>
+      </animateMotion>
+    </circle>
+  </g>
+  
+  <!-- Network Topology Labels -->
+  <g fill="#ffffff" font-size="4" font-family="monospace" opacity="0.7">
+    <text x="20" y="12" text-anchor="middle">ROUTER</text>
+    <text x="80" y="12" text-anchor="middle">FIREWALL</text>
+    <text x="50" y="40" text-anchor="middle">SWITCH</text>
+    <text x="20" y="95" text-anchor="middle">SERVER</text>
+    <text x="80" y="95" text-anchor="middle">CLIENT</text>
+  </g>
+  
+  <!-- Network Activity Indicators -->
+  <g transform="translate(10, 50)" opacity="0.6">
+    <g fill="url(#netGradient2)">
+      <rect x="0" y="-2" width="1" height="4">
+        <animate attributeName="height" values="4;8;4" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-2;-4;-2" dur="1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="2" y="-1" width="1" height="2">
+        <animate attributeName="height" values="2;6;2" dur="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-1;-3;-1" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="4" y="-3" width="1" height="6">
+        <animate attributeName="height" values="6;10;6" dur="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-3;-5;-3" dur="0.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+  
+  <!-- Bandwidth Meter -->
+  <g transform="translate(90, 50)" opacity="0.6">
+    <g fill="url(#netGradient3)">
+      <rect x="0" y="-1" width="1" height="2">
+        <animate attributeName="height" values="2;7;2" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-1;-3.5;-1" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="2" y="-2" width="1" height="4">
+        <animate attributeName="height" values="4;9;4" dur="1.1s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-2;-4.5;-2" dur="1.1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="4" y="0" width="1" height="1">
+        <animate attributeName="height" values="1;5;1" dur="1.3s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="0;-2;0" dur="1.3s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+  
+  <!-- Main Network Pulse -->
+  <circle cx="50" cy="50" r="25" fill="none" stroke="url(#netGradient2)" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="25;40;25" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>
